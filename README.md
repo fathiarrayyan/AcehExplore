@@ -1,66 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Aceh Explore 🌍
+Aceh Explore adalah platform berbasis web yang dirancang untuk membantu wisatawan menjelajahi keindahan alam, budaya, dan destinasi menarik di Aceh. Website ini dilengkapi dengan fitur pencarian lokasi wisata, blog perjalanan, ulasan pengguna, dan lainnya untuk memberikan pengalaman terbaik bagi pengguna.
 
-## About Laravel
+## Fitur Utama 🚀
+- **Destinasi Wisata:** Jelajahi berbagai destinasi wisata populer di Aceh.
+- **Peta Interaktif:** Temukan lokasi wisata terdekat dengan peta interaktif.
+- **Blog Travel:** Baca cerita perjalanan dan tips wisata dari para traveler.
+- **Testimonial:** Ulasan dari pengguna yang telah menggunakan layanan Aceh Explore.
+- **FAQ:** Jawaban atas pertanyaan umum seputar layanan dan destinasi wisata.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalasi 🛠️
+Berikut langkah-langkah untuk menginstal dan menjalankan proyek ini di lokal Anda:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Prasyarat
+Pastikan Anda telah menginstal software berikut di komputer Anda:
+1. PHP versi 8.2 atau lebih baru
+2. Composer
+3. Node.js dan npm
+4. MySQL atau database lain yang didukung oleh Laravel
+5. Server lokal seperti XAMPP, Laragon, atau Valet
 
-## Learning Laravel
+### Langkah Instalasi
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/username/AcehExplore.git
+   cd AcehExplore
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. **Instal Dependency Laravel**
+   Jalankan perintah berikut untuk menginstal dependency backend:
+   ```bash
+   composer install
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3. **Instal Dependency Frontend**
+   Jalankan perintah berikut untuk menginstal dependency frontend:
+   ```bash
+   npm install && npm run dev
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+4. **Konfigurasi Environment**
+   Salin file `.env.example` menjadi `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   Edit file `.env` dan tambahkan konfigurasi berikut:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=aceh_explore
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
 
-## Laravel Sponsors
+5. **Generate Key Aplikasi**
+   ```bash
+   php artisan key:generate
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6. **Migrasi Database**
+   Buat database baru dengan nama `aceh_explore`, kemudian jalankan migrasi:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-### Premium Partners
+7. **Menjalankan Server Lokal**
+   Jalankan perintah berikut untuk memulai server Laravel:
+   ```bash
+   php artisan serve
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+   Website dapat diakses melalui [http://localhost:8000](http://localhost:8000).
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Struktur Direktori Proyek 📁
+- **app/Models:** Model Laravel untuk data seperti destinasi dan blog.
+- **resources/views:** Tampilan halaman utama, blog, dan lainnya.
+- **public/storage:** Direktori untuk menyimpan file gambar seperti destinasi dan blog.
+- **routes/web.php:** File konfigurasi rute aplikasi.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Teknologi yang Digunakan 🧰
+- **Backend:** Laravel 11
+- **Frontend:** Blade, Bootstrap 5, Leaflet.js (untuk peta interaktif)
+- **Database:** MySQL
+- **Tools:** Composer, npm
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Cara Kontribusi 🤝
+Kami terbuka untuk kontribusi! Jika Anda ingin membantu, ikuti langkah berikut:
+1. Fork repository ini.
+2. Buat branch baru: `git checkout -b fitur-baru`.
+3. Commit perubahan Anda: `git commit -m 'Menambahkan fitur baru'`.
+4. Push ke branch: `git push origin fitur-baru`.
+5. Ajukan pull request.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Lisensi 📄
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+---
