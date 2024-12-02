@@ -1,9 +1,10 @@
-<?php 
+<?php
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -54,7 +55,7 @@ class BlogController extends Controller
 
         if ($request->hasFile('image')) {
             if ($blog->image) {
-                \Storage::delete('public/' . $blog->image);
+                Storage::delete('public/' . $blog->image);
             }
             $data['image'] = $request->file('image')->store('blogs', 'public');
         }
@@ -67,7 +68,7 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         if ($blog->image) {
-            \Storage::delete('public/' . $blog->image);
+            Storage::delete('public/' . $blog->image);
         }
 
         $blog->delete();
@@ -78,8 +79,8 @@ class BlogController extends Controller
     public function loadMoreBlogs(Request $request)
     {
         $offset = $request->offset;
-        $blogs = \App\Models\Blog::skip($offset)->take(4)->get();
-    
+        $blogs = \App\Models\Blog::skip($offset)->take(3)->get();
+
         return response()->json([
             'data' => $blogs
         ]);
