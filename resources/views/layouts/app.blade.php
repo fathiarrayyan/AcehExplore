@@ -25,7 +25,7 @@
             position: relative;
             height: 80vh;
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url("/storage/image/kilometer 0.jpg");
+                url("/assets/images/kilometer 0.jpg");
             background-size: cover;
             background-position: center;
             color: white;

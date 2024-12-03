@@ -106,7 +106,7 @@
                 <!-- Testimonial 1 -->
                 <div class="col-md-4">
                     <div class="testimonial-card text-center p-4 shadow-sm rounded bg-white">
-                        <img src="{{ asset('storage/image/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
+                        <img src="{{ asset('assets/images/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
                             width="100" height="100">
                         <h5 class="fw-bold">Nashwa</h5>
                         <p class="text-muted">Traveler</p>
@@ -116,7 +116,7 @@
                 <!-- Testimonial 2 -->
                 <div class="col-md-4">
                     <div class="testimonial-card text-center p-4 shadow-sm rounded bg-white">
-                        <img src="{{ asset('storage/image/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
+                        <img src="{{ asset('assets/images/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
                             width="100" height="100">
                         <h5 class="fw-bold">Ibnu Sina</h5>
                         <p class="text-muted">Traveler</p>
@@ -126,7 +126,7 @@
                 <!-- Testimonial 3 -->
                 <div class="col-md-4">
                     <div class="testimonial-card text-center p-4 shadow-sm rounded bg-white">
-                        <img src="{{ asset('storage/image/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
+                        <img src="{{ asset('assets/images/ica_mi.jpg') }}" alt="ica_mi" class="rounded-circle mb-3"
                             width="100" height="100">
                         <h5 class="fw-bold">Chairunnisa</h5>
                         <p class="text-muted">Traveler</p>
