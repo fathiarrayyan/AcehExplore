@@ -105,6 +105,51 @@
             padding: 3rem 0;
         }
     </style>
+
+    <style>
+    .destination-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .destination-card img {
+        height: 350px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .destination-card .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .blog-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .blog-card img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .blog-card .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    </style>
 </head>
 
 <body>

@@ -19,16 +19,15 @@
             <h2 class="mb-4">Destinations</h2>
             <div class="row" id="destination-container">
                 @foreach ($destinations as $destination)
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="{{ asset('storage/' . $destination->image) }}" class="card-img-top"
-                                alt="{{ $destination->name }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $destination->name }}</h5>
-                                <p class="card-text">{{ $destination->description }}</p>
-                            </div>
-                        </div>
+                <div class="col-md-3">
+                <div class="destination-card shadow-sm h-100">
+                    <img src="{{ asset('storage/' . $destination->image) }}" class="card-img-top" alt="{{ $destination->name }}">
+                    <div class="card-body p-3">
+                        <h5 class="card-title">{{ $destination->name }}</h5>
+                        <p class="card-text">{{ $destination->description }}</p>
                     </div>
+                </div>
+            </div>
                 @endforeach
             </div>
             <div class="text-center mt-4">
@@ -72,17 +71,17 @@
             <h4 class="mb-4">📝 Galeri Pariwisata & Blog Travel</h4>
             <div class="row" id="blog-container">
                 @foreach ($blogs as $blog)
-                    <div class="col-md-4">
-                        <div class="blog-card shadow-sm">
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="img-fluid">
-                            <div class="card-body p-3">
-                                <h5>{{ $blog->title }}</h5>
-                                <p class="text-muted">{{ Str::limit($blog->content, 100) }}</p>
-                                <a href="{{ route('blog.show', $blog->id) }}" class="btn btn-primary btn-sm">Baca
-                                    Selengkapnya</a>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                <div class="blog-card shadow-sm h-100">
+                    <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="img-fluid">
+                    <div class="card-body p-3">
+                        <h5>{{ $blog->title }}</h5>
+                        <p class="text-muted">{{ Str::limit($blog->content, 100) }}</p>
+                        <a href="{{ route('blog.show', $blog->id) }}" class="btn btn-primary btn-sm mt-auto">Baca Selengkapnya</a>
                     </div>
+                </div>
+            </div>
+
                 @endforeach
             </div>
             <div class="text-center mt-4">

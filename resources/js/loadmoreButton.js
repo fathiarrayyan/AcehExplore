@@ -21,21 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
                         card.className = type === 'destination' ? 'col-md-3' : 'col-md-4';
                         card.innerHTML = type === 'destination'
                             ? `
-                                <div class="card">
+                                <div class="destination-card shadow-sm h-100 mt-3">
                                     <img src="/storage/${item.image}" class="card-img-top" alt="${item.name}">
-                                    <div class="card-body">
+                                    <div class="card-body p-3">
                                         <h5 class="card-title">${item.name}</h5>
                                         <p class="card-text">${item.description}</p>
                                     </div>
                                 </div>
                             `
                             : `
-                                <div class="blog-card shadow-sm">
+                                <div class="blog-card shadow-sm h-100 mt-3">
                                     <img src="/storage/${item.image}" alt="${item.title}" class="img-fluid">
                                     <div class="card-body p-3">
                                         <h5>${item.title}</h5>
                                         <p class="text-muted">${(item.content || '').substring(0, 100)}</p>
-                                        <a href="/blog/${item.id}" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                                        <a href="/blog/${item.id}" class="btn btn-primary btn-sm mt-auto">Baca Selengkapnya</a>
                                     </div>
                                 </div>
                             `;
